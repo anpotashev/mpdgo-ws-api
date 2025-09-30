@@ -3,6 +3,7 @@ module github.com/anpotashev/mpd-ws-api
 go 1.24.5
 
 require (
+	github.com/anpotashev/mpdgo v0.0.0-20250930193411-407ec1f531df
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket v1.5.3
@@ -11,8 +12,7 @@ require (
 )
 
 require (
-	github.com/anpotashev/go-observer v0.0.0-20250216101657-15d76d1a3eaa // indirect
-	github.com/anpotashev/mpdgo v0.0.0-20250930185829-0848ed0525f1 // indirect
+	github.com/anpotashev/go-observer v0.0.0-20250930195727-c65407428856 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
