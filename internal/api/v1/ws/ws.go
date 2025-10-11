@@ -102,7 +102,8 @@ var typeToPayload = map[payloadType]func() processable{
 	moveInCurrentPlaylist:          func() processable { return &MoveInCurrentPlaylistRequest{} },
 	batchMoveInCurrentPlaylist:     func() processable { return &BatchMoveInCurrentPlaylistRequest{} },
 	// tree
-	getTree: func() processable { return &GetTreeRequest{} },
+	getTree:    func() processable { return &GetTreeRequest{} },
+	updateTree: func() processable { return &UpdateTree{} },
 	// playback
 	play:     func() processable { return &PlayRequest{} },
 	pause:    func() processable { return &PauseRequest{} },

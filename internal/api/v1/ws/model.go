@@ -30,7 +30,8 @@ const (
 	batchMoveInCurrentPlaylist     payloadType = "current_playlist/batch_move"
 
 	// tree
-	getTree payloadType = "tree/get"
+	getTree    payloadType = "tree/get"
+	updateTree payloadType = "tree/update"
 
 	// playback
 	play     payloadType = "playback/play"
