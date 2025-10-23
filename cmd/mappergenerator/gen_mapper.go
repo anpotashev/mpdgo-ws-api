@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"go/ast"
 	"go/format"
 	"go/parser"
@@ -63,13 +62,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	for k, pkg := range pkgs1 {
-		fmt.Println("key:", k)
-		fmt.Println("pkg:", pkg)
-	}
 	targetPkgFiles := []*ast.File{}
 	for _, f := range pkgs1["dto"].Files {
-		fmt.Println("here")
 		targetPkgFiles = append(targetPkgFiles, f)
 	}
 	toStructInfos := parse(targetPkgFiles)
@@ -219,6 +213,7 @@ func parse(f []*ast.File) []StructInfo {
 						}
 					case *ast.StarExpr:
 						// это указатель
+
 						if _, ok := x.X.(*ast.Ident); ok {
 							if builtinTypes[x.X.(*ast.Ident).Name] {
 								// это указатель на встроенный тип
@@ -231,6 +226,15 @@ func parse(f []*ast.File) []StructInfo {
 									structInfo.StructPtrFields = append(structInfo.StructPtrFields, Field{Name: name.Name, Type: x.X.(*ast.Ident).Name})
 								}
 							}
+						} else {
+							if v, ok := x.X.(*ast.SelectorExpr); ok {
+								if pkg, ok := v.X.(*ast.Ident); ok && pkg.Name == "time" && v.Sel.Name == "Time" {
+									for _, name := range field.Names {
+										structInfo.Fields = append(structInfo.Fields, Field{Name: name.Name})
+									}
+								}
+							}
+
 						}
 					}
 				}

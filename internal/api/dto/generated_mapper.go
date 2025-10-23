@@ -5,7 +5,8 @@ import "github.com/anpotashev/mpdgo/pkg/mpdapi"
 
 func MapPlaylist(in mpdapi.Playlist) Playlist {
 	return Playlist{
-		Name: in.Name,
+		Name:         in.Name,
+		LastModified: in.LastModified,
 		Items: func(items []mpdapi.PlaylistItem) (result []PlaylistItem) {
 			for _, item := range items {
 				result = append(result, MapPlaylistItem(item))
