@@ -38,5 +38,8 @@ func (contextHandler *contextHandler) Handle(ctx context.Context, r slog.Record)
 	if rId, ok := ctx.Value(middleware.RequestIdContextAttributeName).(string); ok && rId != "" {
 		r.AddAttrs(slog.String("request_id", rId))
 	}
+	if commandId, ok := ctx.Value("command_id").(string); ok && commandId != "" {
+		r.AddAttrs(slog.String("command_id", commandId))
+	}
 	return contextHandler.Handler.Handle(ctx, r)
 }

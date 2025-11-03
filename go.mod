@@ -3,7 +3,7 @@ module github.com/anpotashev/mpd-ws-api
 go 1.24.5
 
 require (
-	github.com/anpotashev/mpdgo v0.0.0-20251023164055-58eea3fa2c66
+	github.com/anpotashev/mpdgo v0.0.0-20251103105233-a11c5891d691
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket v1.5.3
