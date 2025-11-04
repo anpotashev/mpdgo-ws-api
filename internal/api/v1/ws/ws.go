@@ -9,6 +9,7 @@ import (
 
 	"github.com/anpotashev/mpd-ws-api/internal/api/v1/ws/event_handlers"
 	"github.com/anpotashev/mpd-ws-api/internal/api/v1/ws/payload_handlers"
+	log "github.com/anpotashev/mpd-ws-api/internal/logger"
 	"github.com/anpotashev/mpdgo/pkg/mpdapi"
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
@@ -247,6 +248,7 @@ func (m *MpdWS) startUpdatingStatus() {
 				state, err := event_handlers.GetStatusEventHandleFunc(m.api)(m.ctx)
 				if err == nil {
 					for cl := range m.clients {
+						log.Info("====sending state", "state", state)
 						cl.send <- WsResponse{
 							Type:    getStatus,
 							Payload: state,

@@ -15,9 +15,9 @@ type AppConfig struct {
 	MpdHost                   string `mapstructure:"MPD_HOST"`
 	MpdPort                   uint16 `mapstructure:"MPD_PORT"`
 	MpdPassword               string `mapstructure:"MPD_PASSWORD"`
-	MpdPoolSize               uint8  `mapstructure:"MPD_POOL_SIZE"`
 	MaxBatchCommand           uint16 `mapstructure:"MAX_BATCH_COMMAND"`
 	CommandReadIntervalMillis uint16 `mapstructure:"COMMAND_READ_INTERVAL_MILLIS"`
+	MpdPoolSize               uint8  `mapstructure:"MPD_POOL_SIZE"`
 	PingIntervalSeconds       uint8  `mapstructure:"PING_INTERVAL_SECONDS"`
 }
 
