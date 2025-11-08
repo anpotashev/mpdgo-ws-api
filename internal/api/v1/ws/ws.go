@@ -2,7 +2,6 @@ package ws
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"sync"
@@ -249,8 +248,7 @@ func (m *MpdWS) startUpdatingStatus() {
 				state, err := event_handlers.GetStatusEventHandleFunc(m.api)(m.ctx)
 				if err == nil {
 					for cl := range m.clients {
-						b, _ := json.Marshal(state)
-						log.Info("====sending state", "state", string(b))
+						log.Info("==== sending state.", "state", state)
 						cl.send <- WsResponse{
 							Type:    getStatus,
 							Payload: state,
