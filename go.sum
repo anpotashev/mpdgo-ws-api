@@ -12,6 +12,8 @@ github.com/anpotashev/mpdgo v0.0.0-20251108095313-812dd8a41265 h1:XskJK4YVZQ+Hq8
 github.com/anpotashev/mpdgo v0.0.0-20251108095313-812dd8a41265/go.mod h1:Nxyf0O+Ceq3faKE9y5qzG8UYubeIdaruMtfxDPZc9Gs=
 github.com/anpotashev/mpdgo v0.0.0-20251110163047-4310a288bc70 h1:EekMBEfP1KlaG9WuPPlOkJjL+uj+1Q+dX5zrjc+0JpA=
 github.com/anpotashev/mpdgo v0.0.0-20251110163047-4310a288bc70/go.mod h1:Nxyf0O+Ceq3faKE9y5qzG8UYubeIdaruMtfxDPZc9Gs=
+github.com/anpotashev/mpdgo v0.0.0-20251110164114-5e206819f01b h1:K63JaDulbZSAQCEf/O5q0KmJH1sIZwyFqywwoOtR/8M=
+github.com/anpotashev/mpdgo v0.0.0-20251110164114-5e206819f01b/go.mod h1:Nxyf0O+Ceq3faKE9y5qzG8UYubeIdaruMtfxDPZc9Gs=
 github.com/bxcodec/faker/v4 v4.0.0-beta.3 h1:gqYNBvN72QtzKkYohNDKQlm+pg+uwBDVMN28nWHS18k=
 github.com/bxcodec/faker/v4 v4.0.0-beta.3/go.mod h1:m6+Ch1Lj3fqW/unZmvkXIdxWS5+XQWPWxcbbQW2X+Ho=
 github.com/coreos/go-systemd/v22 v22.5.0/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
